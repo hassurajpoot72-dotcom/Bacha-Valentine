@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Special</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen" class="screen active">
+  <div class="heart-loader">❤️</div>
+</div>
+
+<!-- Password Screen -->
+<div id="password-screen" class="screen hidden">
+  <div class="password-box">
+    <h2>Enter Password</h2>
+    <p class="hint">Hint: What I mostly call you Babe</p>
+    <input type="password" id="password-input" placeholder="Password">
+    <button id="password-btn">Submit</button>
+    <p id="password-error" class="error"></p>
+  </div>
+</div>
+
+<!-- Message Screens -->
+<div id="screens-container">
+  <div class="message-screen screen hidden" id="screen1"></div>
+  <div class="message-screen screen hidden" id="screen2"></div>
+  <div class="message-screen screen hidden" id="screen3"></div>
+  <div class="message-screen screen hidden" id="screen4"></div>
+  <div class="message-screen screen hidden" id="screen5"></div>
+  <div class="message-screen screen hidden" id="screen6"></div>
+</div>
+
+<!-- Final Screen -->
+<div id="final-screen" class="screen hidden">
+  <div class="final-box">
+    <h2>Will you be my Valentine?</h2>
+    <div class="final-buttons">
+      <button id="yes-btn">Yes</button>
+      <button id="no-btn">No</button>
+    </div>
+    <div class="final-message"></div>
+  </div>
+</div>
+
+<!-- Canvas for Hearts and Flowers -->
+<canvas id="heart-canvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>

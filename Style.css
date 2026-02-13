@@ -1,0 +1,46 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', sans-serif;}
+body,html{width:100%;height:100%;overflow:hidden;}
+
+/* Screens */
+.screen{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;transition:opacity 0.5s;}
+.screen.hidden{display:none;}
+
+/* Loading Heart */
+#loading-screen{background:linear-gradient(135deg,#ff9a9e,#fad0c4); font-size:6rem;}
+.heart-loader{animation:heartbeat 1s infinite;}
+@keyframes heartbeat{
+  0%,100%{transform:scale(1);}
+  25%{transform:scale(1.3);}
+  50%{transform:scale(1.6);}
+  75%{transform:scale(1.3);}
+}
+
+/* Password Screen */
+#password-screen{background:linear-gradient(135deg,#ff4d6d,#ff80aa,#a64ca6); flex-direction:column;}
+.password-box{background:rgba(255,255,255,0.9);padding:40px;border-radius:20px;text-align:center;box-shadow:0 0 30px rgba(0,0,0,0.2);}
+.password-box input{padding:12px;margin-top:15px;font-size:1rem;border-radius:12px;border:1px solid #ccc;width:200px;}
+.password-box button{margin-top:15px;padding:12px 25px;border:none;background:#ff4d6d;color:white;font-size:1rem;cursor:pointer;border-radius:12px;transition:transform 0.2s;}
+.password-box button:hover{transform:scale(1.1);}
+.error{color:red;margin-top:10px;font-weight:bold;}
+
+/* Message Screens */
+.message-screen{width:100%;height:100%;justify-content:center;align-items:center;position:relative;}
+.message-box{background:rgba(255,255,255,0.9);padding:30px;border-radius:20px;width:400px;max-width:90%;text-align:center;position:relative;box-shadow:0 0 20px rgba(0,0,0,0.2);
+  opacity:0; transform:translateY(50px); animation: fadeSlideUp 0.8s forwards;}
+@keyframes fadeSlideUp{to{opacity:1; transform:translateY(0);}}
+.lock-icon{font-size:2rem;margin-bottom:15px;animation:bounce 1s infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+.show-btn{margin-top:20px;padding:12px 25px;border:none;background:#ff4d6d;color:white;font-size:1rem;border-radius:50px;cursor:pointer;transition:transform 0.2s;}
+.show-btn:hover{transform:scale(1.1);}
+
+/* Final Screen */
+#final-screen{background:linear-gradient(135deg,#ff4d6d,#ff80aa,#a64ca6);flex-direction:column;}
+.final-box{background:rgba(255,255,255,0.95);padding:40px;border-radius:20px;text-align:center;position:relative;box-shadow:0 0 20px rgba(0,0,0,0.2);}
+.final-buttons{margin-top:20px;}
+.final-buttons button{margin:10px;padding:12px 25px;border:none;border-radius:12px;font-size:1rem;cursor:pointer;transition:all 0.3s;}
+#yes-btn{background:#2dc653;color:white;}
+#no-btn{background:#ffb703;color:white;position:relative;}
+.final-message{margin-top:20px;font-size:1.2rem;font-weight:bold;color:#ff4d6d;}
+
+/* Canvas */
+#heart-canvas{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;}
